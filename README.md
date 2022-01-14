@@ -19,6 +19,6 @@ Alternatively, just for testing, you can use [TOTP Generator (danhersam.com)](ht
 
 ## Adding a Fingerprint Reader
 
-[![FPS Safe](http://img.youtube.com/vi/Sa1cQXTr1CE/0.jpg)](http://www.youtube.com/watch?vSa1cQXTr1CE "FPS Safe")
+[![FPS Safe](http://img.youtube.com/vi/Sa1cQXTr1CE/0.jpg)](http://www.youtube.com/watch?v=Sa1cQXTr1CE "FPS Safe")
 
 Update 14/1/2022: I added support for a Fingerprint sensor. To avoid complexity, I preferred keeping to original project intact, so support for the Fingerprint sensor is implemented in ``TOTPSafeWithFingerprint.ino``. For a full description of the project, please see https://www.instructables.com/Fingerprint-Safe/. 
