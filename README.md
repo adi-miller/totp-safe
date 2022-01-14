@@ -9,10 +9,16 @@ The code in the repository defines a key (seed) for the TOTP. The key is the str
 
 <code>uint8_t hmacKey[] = {0x4D, 0x79, 0x20, 0x73, 0x61, 0x66, 0x65};</code>
 
-With this key in place, our TOTP implementation will be able to calculate a new 6 digit key every 30 seconds.
+With this key in place, our TOTP implementation will be able to calculate a new 6-digit key every 30 seconds.
 
-Next you'll need to create an entry in your favorite Authenticator app (Microsoft's Authenticator, Google's). Both apps will require the <b>BASE32 representation of the key</b> ("My safe" in my case). You can use any online Base32 Encoder, for example: [Base32 Encode Online (emn178.github.io)](https://emn178.github.io/online-tools/base32_encode.html).
+Next, you'll need to create an entry in your favorite Authenticator app (Microsoft's Authenticator, Google's). Both apps will require the <b>BASE32 representation of the key</b> ("My safe" in my case). You can use any online Base32 Encoder, for example: [Base32 Encode Online (emn178.github.io)](https://emn178.github.io/online-tools/base32_encode.html).
 
-The base32 encoded string (e.g. "My safe" -> "JV4SA43BMZSQ") is the Key to be used for the Authenticator entry. You can enter this manually in your Authenticator app, or you can use a QR. A simple online tool for creating QR codes that Authenticator apps understand is [Generate QR Codes for Google Authenticator (hersam.com)](https://dan.hersam.com/tools/gen-qr-code.php).
+The base32 encoded string (e.g., "My safe" -> "JV4SA43BMZSQ") is the Key to be used for the Authenticator entry. You can enter this manually in your Authenticator app, or you can use a QR. A simple online tool for creating QR codes that Authenticator apps understand is [Generate QR Codes for Google Authenticator (hersam.com)](https://dan.hersam.com/tools/gen-qr-code.php).
 
-Alternatively, just for testing, you can use [TOTP Generator (danhersam.com)](https://totp.danhersam.com/?key=JV4SA43BMZSQ). You can manually enter the key (again, in base32 encoded string), and it will prompt you for the 6 digit one-time password, which the safe will accept in the 30 second time window.
+Alternatively, just for testing, you can use [TOTP Generator (danhersam.com)](https://totp.danhersam.com/?key=JV4SA43BMZSQ). You can manually enter the key (again, in base32 encoded string), and it will prompt you for the 6-digit one-time password, which the safe will accept in the 30 second time window.
+
+## Adding a Fingerprint Reader
+
+[![FPS Safe](http://img.youtube.com/vi/Sa1cQXTr1CE/0.jpg)](http://www.youtube.com/watch?vSa1cQXTr1CE "FPS Safe")
+
+Update 14/1/2022: I added support for a Fingerprint sensor. To avoid complexity, I preferred keeping to original project intact, so support for the Fingerprint sensor is implemented in ``TOTPSafeWithFingerprint.ino``. For a full description of the project, please see https://www.instructables.com/Fingerprint-Safe/. 
